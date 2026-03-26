@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Юрий и Иван | Строительство и ремонт высшего класса в Ярославле</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Юрий и Иван | Элитный ремонт и строительство в Ярославле и области</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Индустриальная строительная палитра */
+        /* Индустриальная строительная палитра премиум-класса */
         :root {
-            --primary: #FF6B00; /* Строительный оранжевый */
+            --primary: #FF6B00; 
             --primary-hover: #e65c00;
-            --dark: #1A1A24; /* Глубокий графитово-синий */
+            --dark: #1A1A24; 
             --darker: #111118;
-            --light: #F4F4F6; /* Цвет бетона/штукатурки */
+            --light: #F4F4F6; 
             --white: #ffffff;
             --text-gray: #B0B0B8;
             --border: #2A2A35;
@@ -21,7 +21,7 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Roboto', sans-serif; background-color: var(--light); color: var(--darker); line-height: 1.6; scroll-behavior: smooth; }
-        h1, h2, h3, h4, .logo { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        h1, h2, h3, h4, h5, .logo, .title-oswald { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
 
@@ -34,82 +34,103 @@
         .nav-links a { font-size: 0.9rem; font-weight: 700; color: var(--white); text-transform: uppercase; transition: color 0.3s; letter-spacing: 1px; }
         .nav-links a:hover { color: var(--primary); }
 
-        /* Главный экран (Hero) с диагональным срезом */
-        .hero { position: relative; height: 100vh; display: flex; align-items: center; background: linear-gradient(rgba(26, 26, 36, 0.85), rgba(26, 26, 36, 0.95)), url('https://images.unsplash.com/photo-1504307651254-35680f356f58?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; padding: 0 20px; clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); margin-bottom: -50px; }
+        /* Главный экран (Hero) */
+        .hero { position: relative; height: 100vh; display: flex; align-items: center; background: linear-gradient(rgba(26, 26, 36, 0.85), rgba(26, 26, 36, 0.95)), url('https://images.unsplash.com/photo-1504307651254-35680f356f58?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; padding: 0 20px; clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); margin-bottom: 40px; }
         .hero-container { max-width: 1200px; margin: 0 auto; width: 100%; }
-        .hero-content { max-width: 800px; animation: slideUp 1s ease; }
-        .badge { display: inline-block; background: var(--primary); color: var(--white); padding: 5px 15px; font-weight: 700; font-size: 0.9rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 700; color: var(--white); margin-bottom: 20px; line-height: 1.1; }
+        .hero-content { max-width: 900px; animation: slideUp 1s ease; }
+        .badge { display: inline-block; background: var(--primary); color: var(--white); padding: 8px 20px; font-weight: 700; font-size: 0.9rem; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; color: var(--white); margin-bottom: 25px; line-height: 1.2; }
         .hero h1 span { color: var(--primary); }
-        .hero p { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 40px; max-width: 600px; border-left: 4px solid var(--primary); padding-left: 15px; }
+        .hero p { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 40px; max-width: 700px; border-left: 4px solid var(--primary); padding-left: 20px; }
         
-        /* Кнопки */
         .btn-group { display: flex; gap: 20px; flex-wrap: wrap; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 40px; font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s; cursor: pointer; border: none; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 18px 45px; font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s; cursor: pointer; border: none; }
         .btn-primary { background: var(--primary); color: var(--white); clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); }
         .btn-primary:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3); }
         .btn-outline { background: transparent; color: var(--white); border: 2px solid var(--text-gray); }
         .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
 
         /* Общие секции */
-        .section { padding: 120px 20px 80px; }
+        .section { padding: 100px 20px; }
         .container { max-width: 1200px; margin: 0 auto; }
         .section-header { margin-bottom: 60px; display: flex; flex-direction: column; align-items: flex-start; }
         .section-header.center { align-items: center; text-align: center; }
         .section-title { font-size: 3rem; color: var(--dark); margin-bottom: 15px; line-height: 1.2; }
         .section-subtitle { font-size: 1.1rem; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Блок 20 лет опыта (О нас) */
-        .about-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .about-image-box { position: relative; }
-        .about-image { width: 100%; border-radius: 4px; box-shadow: 20px 20px 0 var(--primary); display: block; }
-        .experience-badge { position: absolute; bottom: -30px; left: -30px; background: var(--dark); color: var(--white); padding: 30px; text-align: center; border-bottom: 5px solid var(--primary); }
-        .experience-badge .num { display: block; font-family: 'Oswald', sans-serif; font-size: 4rem; font-weight: 700; line-height: 1; color: var(--primary); }
-        .experience-badge .text { font-size: 1rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
+        /* Блок "Лицо компании" (Обращение Юрия) */
+        .face-section { background: var(--white); padding: 80px 0; }
+        .face-wrapper { display: grid; grid-template-columns: 450px 1fr; gap: 60px; align-items: center; background: var(--light); border-radius: 2px; border-left: 8px solid var(--primary); padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
+        .face-image-container { position: relative; }
+        .face-image { width: 100%; height: auto; object-fit: cover; border-radius: 4px; box-shadow: -15px 15px 0 var(--darker); display: block; }
+        .face-badge { position: absolute; bottom: 20px; right: -20px; background: var(--primary); color: var(--white); padding: 15px 25px; font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
         
-        .about-content p { font-size: 1.1rem; margin-bottom: 20px; color: #444; }
-        .about-content p strong { color: var(--dark); }
-        .guarantees { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .guarantee-item { background: var(--white); padding: 20px; border-left: 4px solid var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .guarantee-item h4 { font-size: 1.2rem; margin-bottom: 10px; color: var(--dark); }
-        .guarantee-item p { font-size: 0.9rem; margin-bottom: 0; color: #666; }
+        .face-content h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--dark); }
+        .face-content p { font-size: 1.15rem; margin-bottom: 20px; color: #444; line-height: 1.7; }
+        .face-content p strong { color: var(--dark); background: rgba(255, 107, 0, 0.1); padding: 0 5px; }
+        .signature { margin-top: 30px; font-family: 'Oswald', sans-serif; font-size: 1.5rem; color: var(--primary); }
+        .signature span { display: block; font-family: 'Roboto', sans-serif; font-size: 0.9rem; color: var(--text-gray); text-transform: none; margin-top: 5px; }
 
-        /* Услуги и прайс (Темный блок) */
-        .services-section { background: var(--dark); color: var(--white); position: relative; }
-        /* Фоновый паттерн чертежа */
-        .services-section::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none; }
+        /* Преимущества и Опыт */
+        .advantages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
+        .adv-card { background: var(--dark); color: var(--white); padding: 40px 30px; border-top: 4px solid var(--primary); transition: transform 0.3s; }
+        .adv-card:hover { transform: translateY(-10px); }
+        .adv-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .adv-card h3 { font-size: 1.3rem; margin-bottom: 15px; }
+        .adv-card p { color: var(--text-gray); font-size: 0.95rem; }
+
+        /* Регион работы */
+        .region-block { background: url('https://images.unsplash.com/photo-1590242274972-00100a758784?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed; padding: 100px 0; position: relative; text-align: center; color: var(--white); margin-top: 60px; }
+        .region-block::before { content: ''; position: absolute; inset: 0; background: rgba(26, 26, 36, 0.9); }
+        .region-content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .region-content h2 { font-size: 2.8rem; margin-bottom: 20px; color: var(--primary); }
+        .region-content p { font-size: 1.2rem; line-height: 1.8; color: #ddd; }
+        .cities-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; }
+        .city-tag { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 50px; font-size: 0.9rem; letter-spacing: 1px; }
+
+        /* Услуги и прайс (Темный блок с категориями) */
+        .services-section { background: var(--dark); color: var(--white); position: relative; padding-bottom: 120px; }
         .services-section .section-title { color: var(--white); }
-        .table-responsive { width: 100%; overflow-x: auto; background: var(--darker); padding: 30px; border-radius: 8px; border: 1px solid var(--border); position: relative; z-index: 2; }
+        
+        .price-category { margin-bottom: 50px; background: var(--darker); border-radius: 8px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .price-category-header { background: rgba(255, 107, 0, 0.1); padding: 20px 30px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 15px; }
+        .price-category-header i { color: var(--primary); font-size: 1.5rem; }
+        .price-category-header h3 { font-size: 1.4rem; color: var(--white); margin: 0; }
+        
+        .table-responsive { width: 100%; overflow-x: auto; }
         table { width: 100%; border-collapse: collapse; min-width: 600px; }
-        th { font-family: 'Oswald', sans-serif; text-transform: uppercase; font-size: 1.2rem; color: var(--text-gray); padding: 20px; text-align: left; border-bottom: 2px solid var(--border); }
-        td { padding: 20px; border-bottom: 1px solid var(--border); font-size: 1.1rem; }
+        th { font-family: 'Oswald', sans-serif; text-transform: uppercase; font-size: 1rem; color: var(--text-gray); padding: 15px 30px; text-align: left; border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.2); }
+        td { padding: 15px 30px; border-bottom: 1px solid var(--border); font-size: 1.05rem; }
         tr:last-child td { border-bottom: none; }
         tr:hover td { background: rgba(255, 255, 255, 0.02); }
-        .price-highlight { color: var(--primary); font-weight: 700; font-family: 'Oswald', sans-serif; font-size: 1.3rem; }
+        .price-highlight { color: var(--primary); font-weight: 700; font-family: 'Oswald', sans-serif; font-size: 1.2rem; white-space: nowrap; }
 
-        /* Портфолио (Строгий грид) */
+        /* Портфолио */
         .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
-        .portfolio-card { position: relative; overflow: hidden; background: var(--dark); aspect-ratio: 4/3; group; }
+        .portfolio-card { position: relative; overflow: hidden; background: var(--dark); aspect-ratio: 4/3; group; border-radius: 4px; }
         .portfolio-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); opacity: 0.9; }
         .portfolio-card:hover img { transform: scale(1.1); opacity: 0.4; }
-        .portfolio-info { position: absolute; inset: 0; padding: 30px; display: flex; flex-direction: column; justify-content: flex-end; transform: translateY(20px); opacity: 0; transition: all 0.4s ease; }
+        .portfolio-info { position: absolute; inset: 0; padding: 30px; display: flex; flex-direction: column; justify-content: flex-end; transform: translateY(20px); opacity: 0; transition: all 0.4s ease; background: linear-gradient(to top, rgba(17,17,24,0.95), transparent); }
         .portfolio-card:hover .portfolio-info { transform: translateY(0); opacity: 1; }
         .portfolio-info h3 { color: var(--white); font-size: 1.5rem; margin-bottom: 10px; }
-        .portfolio-info p { color: var(--primary); font-weight: 700; font-size: 1rem; text-transform: uppercase; }
+        .portfolio-info p { color: var(--primary); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 5px; }
+        .portfolio-location { color: var(--text-gray); font-size: 0.85rem; display: flex; align-items: center; gap: 5px; }
 
         /* Контакты */
         .contact-section { background: var(--white); }
-        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; background: var(--dark); overflow: hidden; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .contact-info { padding: 60px; color: var(--white); display: flex; flex-direction: column; justify-content: center; }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; background: var(--dark); overflow: hidden; border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .contact-info { padding: 80px 60px; color: var(--white); display: flex; flex-direction: column; justify-content: center; }
         .contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; }
         .contact-info p { color: var(--text-gray); margin-bottom: 40px; font-size: 1.1rem; }
-        .phone-link { display: inline-flex; align-items: center; gap: 15px; font-family: 'Oswald', sans-serif; font-size: 3rem; color: var(--primary); font-weight: 700; transition: transform 0.3s; margin-bottom: 30px; }
+        .phone-link { display: inline-flex; align-items: center; gap: 15px; font-family: 'Oswald', sans-serif; font-size: 3rem; color: var(--primary); font-weight: 700; transition: transform 0.3s; margin-bottom: 10px; }
         .phone-link:hover { transform: translateX(10px); }
+        .master-name-contact { font-size: 1.2rem; color: var(--white); font-weight: 500; margin-bottom: 30px; display: block; }
+        
         .messengers { display: flex; gap: 15px; }
-        .msg-btn { width: 50px; height: 50px; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--white); transition: all 0.3s; border-radius: 4px; }
+        .msg-btn { width: 60px; height: 60px; background: var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--white); transition: all 0.3s; border-radius: 4px; }
         .msg-btn.wa:hover { background: #25D366; }
         .msg-btn.tg:hover { background: #0088cc; }
-        .contact-image { background: url('https://images.unsplash.com/photo-1541888087401-dc9a4563a925?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover; min-height: 400px; }
+        .contact-image { background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover; min-height: 400px; }
 
         /* Футер */
         footer { background: var(--darker); color: var(--text-gray); padding: 40px 20px; text-align: center; border-top: 1px solid var(--border); }
@@ -118,27 +139,30 @@
 
         /* Модальное окно (Админка) */
         .modal { display: none; position: fixed; z-index: 2000; inset: 0; background: rgba(17, 17, 24, 0.95); backdrop-filter: blur(8px); }
-        .modal-content { background: var(--dark); max-width: 500px; margin: 10vh auto; padding: 40px; border-top: 5px solid var(--primary); position: relative; }
+        .modal-content { background: var(--dark); max-width: 500px; margin: 10vh auto; padding: 40px; border-top: 5px solid var(--primary); position: relative; border-radius: 4px; }
         .close-btn { position: absolute; top: 20px; right: 20px; color: var(--text-gray); font-size: 1.5rem; cursor: pointer; transition: color 0.3s; }
         .close-btn:hover { color: var(--primary); }
         .admin-title { font-family: 'Oswald', sans-serif; color: var(--white); font-size: 2rem; margin-bottom: 10px; text-transform: uppercase; }
         .admin-desc { color: var(--primary); margin-bottom: 30px; font-size: 0.9rem; }
         .form-group { margin-bottom: 20px; }
-        .form-control { width: 100%; padding: 15px; background: var(--darker); border: 1px solid var(--border); color: var(--white); font-family: 'Roboto', sans-serif; font-size: 1rem; outline: none; transition: border-color 0.3s; }
+        .form-control { width: 100%; padding: 15px; background: var(--darker); border: 1px solid var(--border); color: var(--white); font-family: 'Roboto', sans-serif; font-size: 1rem; outline: none; transition: border-color 0.3s; border-radius: 4px; }
         .form-control:focus { border-color: var(--primary); }
 
         /* Адаптивность */
-        @media (max-width: 992px) {
-            .about-wrapper, .contact-wrapper { grid-template-columns: 1fr; }
-            .experience-badge { bottom: 20px; left: 20px; padding: 20px; }
+        @media (max-width: 1024px) {
+            .face-wrapper { grid-template-columns: 1fr; }
+            .face-image-container { max-width: 500px; margin: 0 auto; }
+            .contact-wrapper { grid-template-columns: 1fr; }
             .contact-image { display: none; }
         }
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero { clip-path: none; margin-bottom: 0; }
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.2rem; }
             .section-title { font-size: 2.2rem; }
-            .phone-link { font-size: 2rem; }
+            .phone-link { font-size: 2.2rem; }
+            .advantages { grid-template-columns: 1fr; }
+            .region-content h2 { font-size: 2rem; }
         }
 
         @keyframes slideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
@@ -153,7 +177,7 @@
                 ЮРИЙ & ИВАН
             </div>
             <div class="nav-links">
-                <a href="#about">Опыт и подход</a>
+                <a href="#about">О нас</a>
                 <a href="#prices">Услуги и цены</a>
                 <a href="#portfolio">Объекты</a>
                 <a href="#contacts">Контакты</a>
@@ -164,47 +188,76 @@
     <header class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="badge">Строительство & Ремонт под ключ</div>
-                <h1>ВЫСШИЙ СТАНДАРТ <span>КАЧЕСТВА</span> В РЕГИОНЕ</h1>
-                <p>Профессиональная бригада строителей. Возведение домов, элитная отделка, строгий контроль технологий на каждом квадратном метре.</p>
+                <div class="badge">Строительство & Ремонт под ключ в Ярославле</div>
+                <h1>ВЫСШИЙ СТАНДАРТ <span>КАЧЕСТВА</span> ОТ ПРОФЕССИОНАЛОВ</h1>
+                <p>Частная бригада мастеров. Возведение домов, элитная отделка интерьеров, строгий контроль технологий по ГОСТ и СНиП на каждом квадратном метре.</p>
                 <div class="btn-group">
-                    <a href="#contacts" class="btn btn-primary"><i class="fas fa-calculator"></i> Рассчитать проект</a>
-                    <a href="#portfolio" class="btn btn-outline">Смотреть объекты</a>
+                    <a href="#contacts" class="btn btn-primary"><i class="fas fa-calculator"></i> Заказать замер</a>
+                    <a href="#portfolio" class="btn btn-outline">Смотреть портфолио</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="section container" id="about">
-        <div class="section-header">
-            <span class="section-subtitle">О нашей работе</span>
-            <h2 class="section-title">Исключили все ошибки.<br>Оставили только качество.</h2>
-        </div>
-        
-        <div class="about-wrapper">
-            <div class="about-image-box">
-                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Мастера за работой" class="about-image">
-                <div class="experience-badge">
-                    <span class="num">20+</span>
-                    <span class="text">Лет опыта</span>
-                </div>
+    <section class="face-section" id="about">
+        <div class="container">
+            <div class="section-header center" style="margin-bottom: 40px;">
+                <span class="section-subtitle">Ваш гарант надежности</span>
+                <h2 class="section-title">Кто будет работать на вашем объекте?</h2>
             </div>
             
-            <div class="about-content">
-                <p>Мы — Юрий и Иван. За плечами <strong>более 20 лет непрерывной практики</strong> на строительных и ремонтных объектах Ярославля и области.</p>
-                <p>За эти годы мы прошли через всё. Мы давно изучили все подводные камни, свойства материалов и проработали все возможные ошибки, которые совершают новички и "шабашники". Сегодня наш технический процесс отточен до идеала.</p>
-                <p>Мы гарантируем <strong>качество исполнения на самом высшем уровне в регионе</strong>. Для нас нет шаблонных решений — к каждому заказчику и объекту мы применяем исключительно индивидуальный подход, вникая в каждую деталь вашего проекта.</p>
+            <div class="face-wrapper">
+                <div class="face-image-container">
+                    <img src="http://googleusercontent.com/image_generation_content/1" alt="Юрий - Главный мастер и основатель" class="face-image" onerror="this.src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="face-badge">Опыт 20+ лет</div>
+                </div>
                 
-                <div class="guarantees">
-                    <div class="guarantee-item">
-                        <h4><i class="fas fa-ruler-combined" style="color: var(--primary); margin-right: 10px;"></i> Личный контроль</h4>
-                        <p>Работаем сами. Никаких посредников и перекинутых заказов.</p>
-                    </div>
-                    <div class="guarantee-item">
-                        <h4><i class="fas fa-file-signature" style="color: var(--primary); margin-right: 10px;"></i> Технадзор</h4>
-                        <p>Соблюдение СНиП и ГОСТ на каждом этапе работ.</p>
+                <div class="face-content">
+                    <h2>Здравствуйте! Меня зовут Юрий.</h2>
+                    <p>Я и мой напарник Иван — профессиональные мастера-отделочники и строители. Мы не прячемся за спинами менеджеров и не являемся "фирмой-прокладкой", которая нанимает случайных людей с улицы.</p>
+                    <p>За <strong>более чем 20 лет непрерывной практики</strong> на объектах Ярославля и области мы отработали абсолютно все ошибки, которые только возможны в стройке. Сегодня наш технический процесс доведен до идеала.</p>
+                    <p>Мы берем на себя полную ответственность за результат. Лично выезжаем на замеры, лично закупаем качественные материалы со скидками баз и <strong>лично выполняем всю работу своими руками</strong>.</p>
+                    <p>Индивидуальный подход для нас — это не пустой звук. Это детальное изучение вашего проекта и подбор решений, которые сэкономят ваш бюджет без потери элитного качества.</p>
+                    
+                    <div class="signature">
+                        Юрий
+                        <span>Главный мастер и ваш личный прораб</span>
                     </div>
                 </div>
+            </div>
+
+            <div class="advantages">
+                <div class="adv-card">
+                    <i class="fas fa-ruler-combined"></i>
+                    <h3>Без посредников</h3>
+                    <p>Вы общаетесь напрямую с теми людьми, которые будут класть плитку и возводить стены. Никаких испорченных телефонов.</p>
+                </div>
+                <div class="adv-card">
+                    <i class="fas fa-file-signature"></i>
+                    <h3>Прозрачная смета</h3>
+                    <p>Фиксируем цены до начала работ. Честно считаем каждый саморез. Вы всегда знаете, за что платите.</p>
+                </div>
+                <div class="adv-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Гарантия качества</h3>
+                    <p>Мы живем и работаем в Ярославле. Наша репутация — наш главный актив, поэтому нам не стыдно смотреть в глаза заказчикам.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="region-block">
+        <div class="region-content">
+            <h2>РАБОТАЕМ ПО ВСЕМУ ЯРОСЛАВСКОМУ РЕГИОНУ</h2>
+            <p>Мы мобильны и полностью укомплектованы профессиональным инструментом. Берем в работу объекты любой сложности: от квартир в новостройках до удаленных загородных усадеб.</p>
+            <div class="cities-list">
+                <span class="city-tag">Весь Ярославль (все районы)</span>
+                <span class="city-tag">Рыбинск</span>
+                <span class="city-tag">Переславль-Залесский</span>
+                <span class="city-tag">Тутаев</span>
+                <span class="city-tag">Углич</span>
+                <span class="city-tag">Ростов Великий</span>
+                <span class="city-tag">Коттеджные поселки области</span>
             </div>
         </div>
     </section>
@@ -212,54 +265,84 @@
     <section class="section services-section" id="prices">
         <div class="container">
             <div class="section-header center">
-                <span class="section-subtitle">Прайс-лист 2026</span>
-                <h2 class="section-title">Строительные и отделочные услуги</h2>
-                <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto;">Стоимость формируется прозрачно. Цены учитывают надбавку за наш опыт, премиальное качество материалов и гарантию отсутствия переделок.</p>
+                <span class="section-subtitle">Детальный прайс-лист 2026</span>
+                <h2 class="section-title">Категории выполняемых работ</h2>
+                <p style="color: var(--text-gray); max-width: 700px; margin: 0 auto;">Цены указаны с учетом надбавки за высший уровень исполнения и личный контроль опытных мастеров. Точная смета составляется только после осмотра объекта Юрием.</p>
             </div>
 
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Наименование работ</th>
-                            <th>Ед. изм.</th>
-                            <th>Стоимость (от)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Возведение загородных домов (фундамент, коробка, кровля)</td>
-                            <td>м²</td>
-                            <td class="price-highlight">46 000 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>Элитная дизайнерская отделка интерьера (сложные узлы)</td>
-                            <td>м²</td>
-                            <td class="price-highlight">28 750 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>Капитальный ремонт "под ключ" (стандарт)</td>
-                            <td>м²</td>
-                            <td class="price-highlight">20 700 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>Черновая отделка (геометрия стен, стяжка, инженерные сети)</td>
-                            <td>м²</td>
-                            <td class="price-highlight">11 500 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>Сложная облицовка фасадов (кирпич, камень, клинкер)</td>
-                            <td>м²</td>
-                            <td class="price-highlight">2 400 ₽</td>
-                        </tr>
-                        <tr>
-                            <td>Укладка крупноформатного керамогранита / запил под 45°</td>
-                            <td>м²</td>
-                            <td class="price-highlight">2 250 ₽</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="price-category">
+                <div class="price-category-header">
+                    <i class="fas fa-hammer"></i>
+                    <h3>Черновые и подготовительные работы</h3>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead><tr><th>Наименование работ</th><th>Ед. изм.</th><th>Стоимость (от)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Демонтаж старых конструкций и перегородок</td><td>м²</td><td class="price-highlight">800 ₽</td></tr>
+                            <tr><td>Штукатурка стен по маякам (идеальная геометрия)</td><td>м²</td><td class="price-highlight">950 ₽</td></tr>
+                            <tr><td>Устройство полусухой / классической стяжки пола</td><td>м²</td><td class="price-highlight">1 100 ₽</td></tr>
+                            <tr><td>Возведение перегородок (газоблок, пазогребень, ГКЛ)</td><td>м²</td><td class="price-highlight">1 300 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
+            <div class="price-category">
+                <div class="price-category-header">
+                    <i class="fas fa-paint-roller"></i>
+                    <h3>Чистовая и дизайнерская отделка</h3>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead><tr><th>Наименование работ</th><th>Ед. изм.</th><th>Стоимость (от)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Комплексный ремонт "под ключ" (стандартный проект)</td><td>м²</td><td class="price-highlight">20 700 ₽</td></tr>
+                            <tr><td>Элитная отделка интерьера (сложные узлы, премиум материалы)</td><td>м²</td><td class="price-highlight">28 750 ₽</td></tr>
+                            <tr><td>Укладка крупноформатного керамогранита (запил под 45°)</td><td>м²</td><td class="price-highlight">2 250 ₽</td></tr>
+                            <tr><td>Малярные работы высшего класса (безвоздушная покраска)</td><td>м²</td><td class="price-highlight">1 400 ₽</td></tr>
+                            <tr><td>Монтаж сложных многоуровневых потолков (ГКЛ)</td><td>м²</td><td class="price-highlight">1 800 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="price-category">
+                <div class="price-category-header">
+                    <i class="fas fa-home"></i>
+                    <h3>Строительство и Фасадные работы</h3>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead><tr><th>Наименование работ</th><th>Ед. изм.</th><th>Стоимость (от)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Возведение загородных домов (фундамент, коробка, кровля)</td><td>м²</td><td class="price-highlight">46 000 ₽</td></tr>
+                            <tr><td>Устройство монолитных фундаментов (плита, лента)</td><td>м³</td><td class="price-highlight">6 500 ₽</td></tr>
+                            <tr><td>Сложная облицовка фасадов (кирпич, декоративный камень)</td><td>м²</td><td class="price-highlight">2 400 ₽</td></tr>
+                            <tr><td>Монтаж вентилируемых фасадов и утепление</td><td>м²</td><td class="price-highlight">1 900 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="price-category">
+                <div class="price-category-header">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Инженерные сети</h3>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead><tr><th>Наименование работ</th><th>Ед. изм.</th><th>Стоимость (от)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Электромонтажные работы "под ключ" (сборка щита, ГОСТ кабель)</td><td>точка</td><td class="price-highlight">1 500 ₽</td></tr>
+                            <tr><td>Разводка труб водоснабжения и канализации (Rehau, Tece)</td><td>точка</td><td class="price-highlight">3 200 ₽</td></tr>
+                            <tr><td>Установка и подключение инсталляции / премиум сантехники</td><td>шт.</td><td class="price-highlight">6 000 ₽</td></tr>
+                            <tr><td>Монтаж теплого пола (водяной / электрический)</td><td>м²</td><td class="price-highlight">1 100 ₽</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -267,6 +350,7 @@
         <div class="section-header">
             <span class="section-subtitle">Наши объекты</span>
             <h2 class="section-title">Результат, за который не стыдно</h2>
+            <p style="color: #666;">Реализованные проекты Юрия и Ивана на территории Ярославской области.</p>
         </div>
         
         <div class="portfolio-grid" id="portfolio-container">
@@ -277,13 +361,14 @@
         <div class="container">
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <span class="section-subtitle" style="color: var(--primary);">Начать работу</span>
+                    <span class="section-subtitle" style="color: var(--primary);">Связь с мастером</span>
                     <h2>Готовы обсудить ваш объект?</h2>
-                    <p>Позвоните нам. Мы проконсультируем вас по технологиям, сориентируем по срокам и договоримся о выезде на замер. Индивидуальный подход начинается с первого звонка.</p>
+                    <p>Звоните напрямую. Я (Юрий) лично проконсультирую вас по технологиям, материалам, сориентирую по срокам и мы договоримся о выезде на замер в любую точку области.</p>
                     
                     <a href="tel:+79092813621" class="phone-link">+7 (909) 281-36-21</a>
+                    <span class="master-name-contact">На связи: Юрий (Главный мастер)</span>
                     
-                    <p style="font-size: 0.9rem; color: #888; margin-bottom: 15px;">Главный мастер — Юрий. Звоните напрямую или пишите в мессенджеры:</p>
+                    <p style="font-size: 0.95rem; color: #888; margin-bottom: 15px;">Удобнее написать? Жду ваших сообщений с фото объекта в мессенджерах:</p>
                     <div class="messengers">
                         <a href="https://wa.me/79092813621" target="_blank" class="msg-btn wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://t.me/+79092813621" target="_blank" class="msg-btn tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
@@ -319,10 +404,10 @@
                     <input type="text" id="img-url" class="form-control" placeholder="Прямая ссылка на фото (URL)">
                 </div>
                 <div class="form-group">
-                    <input type="text" id="img-title" class="form-control" placeholder="Заголовок (например: Коттедж в Рыбинске)">
+                    <input type="text" id="img-title" class="form-control" placeholder="Заголовок (например: Дизайнерский ремонт)">
                 </div>
                 <div class="form-group">
-                    <input type="text" id="img-desc" class="form-control" placeholder="Краткое описание работ">
+                    <input type="text" id="img-desc" class="form-control" placeholder="Локация (например: Ярославль, ЖК Династия)">
                 </div>
                 <button class="btn btn-primary" style="width: 100%; margin-bottom: 15px;" onclick="addPortfolioItem()">Опубликовать объект</button>
                 <button class="btn btn-outline" style="width: 100%; border-color: #ff3333; color: #ff3333;" onclick="clearLocalPortfolio()">Сбросить добавленные фото</button>
@@ -331,37 +416,37 @@
     </div>
 
     <script>
-        // Базовое портфолио с жесткими строительными и премиальными фото
+        // Базовое портфолио адаптированное под Ярославский регион
         const defaultPortfolio = [
             {
                 img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                title: "Коттедж, Ярославский р-н",
-                desc: "Строительство с нуля под ключ"
+                title: "Строительство коттеджа",
+                desc: "Заволжский район, Ярославль"
             },
             {
                 img: "https://images.unsplash.com/photo-1588854337115-1c67d9247e4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                title: "ЖК «Династия»",
-                desc: "Премиальная отделка квартиры"
+                title: "Премиальная отделка",
+                desc: "ЖК «Династия», Центр"
             },
             {
                 img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                title: "Частный дом, Рыбинск",
-                desc: "Сложная архитектурная облицовка"
+                title: "Облицовка фасада",
+                desc: "г. Рыбинск, частный сектор"
             },
             {
                 img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                 title: "Проект ванной комнаты",
-                desc: "Укладка крупноформатного керамогранита"
+                desc: "ЖК «Волжские Пенаты»"
             },
             {
                 img: "https://images.unsplash.com/photo-1504307651254-35680f356f58?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                title: "Монолитные работы",
-                desc: "Устройство надежного фундамента"
+                title: "Монолитный фундамент",
+                desc: "г. Переславль-Залесский"
             },
             {
                 img: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                title: "Квартира-студия",
-                desc: "Современный минималистичный ремонт"
+                title: "Дизайн-студия",
+                desc: "Фрунзенский район, Ярославль"
             }
         ];
 
@@ -370,7 +455,7 @@
             const container = document.getElementById('portfolio-container');
             container.innerHTML = '';
             
-            const localPortfolio = JSON.parse(localStorage.getItem('stroiteli_pro_portfolio')) || [];
+            const localPortfolio = JSON.parse(localStorage.getItem('stroiteli_pro_portfolio_yar')) || [];
             const fullPortfolio = [...defaultPortfolio, ...localPortfolio];
 
             fullPortfolio.forEach(item => {
@@ -379,8 +464,8 @@
                 card.innerHTML = `
                     <img src="${item.img}" alt="${item.title}">
                     <div class="portfolio-info">
-                        <h3>${item.title}</h3>
-                        <p>${item.desc}</p>
+                        <p>${item.title}</p>
+                        <div class="portfolio-location"><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> ${item.desc}</div>
                     </div>
                 `;
                 container.appendChild(card);
@@ -414,9 +499,9 @@
 
             if(img && title) {
                 const newItem = { img, title, desc };
-                const localPortfolio = JSON.parse(localStorage.getItem('stroiteli_pro_portfolio')) || [];
+                const localPortfolio = JSON.parse(localStorage.getItem('stroiteli_pro_portfolio_yar')) || [];
                 localPortfolio.push(newItem);
-                localStorage.setItem('stroiteli_pro_portfolio', JSON.stringify(localPortfolio));
+                localStorage.setItem('stroiteli_pro_portfolio_yar', JSON.stringify(localPortfolio));
                 
                 document.getElementById('img-url').value = '';
                 document.getElementById('img-title').value = '';
@@ -432,7 +517,7 @@
 
         function clearLocalPortfolio() {
             if(confirm('Вы уверены, что хотите удалить все добавленные фото?')) {
-                localStorage.removeItem('stroiteli_pro_portfolio');
+                localStorage.removeItem('stroiteli_pro_portfolio_yar');
                 renderPortfolio();
                 closeAdmin();
             }
